@@ -1,9 +1,19 @@
+export interface CalendarEventTag {
+    id: string;
+    name: string;
+    color: string;
+    dotColor?: string; /** Solid color class used for small indicator dots (e.g. "bg-blue-500"). */
+}
+
 export interface CalendarEvent {
     id: string;
 
     title: string;
     description?: string;
+    location?: string;
     type: CalendarEventType;
+    category?: CalendarEventCategory;
+    tag?: CalendarEventTag;
 
     startDate: Date;
     endDate?: Date;
@@ -22,7 +32,10 @@ export interface CalendarEvent {
 export interface CreateCalendarEvent {
     title: string;
     description?: string;
+    location?: string;
     type: CalendarEventType;
+    category?: CalendarEventCategory;
+    tag?: CalendarEventTag;
 
     startDate: Date;
     endDate?: Date;
@@ -38,7 +51,10 @@ export interface CreateCalendarEvent {
 export interface UpdateCalendarEvent {
     title?: string;
     description?: string;
+    location?: string;
     type?: CalendarEventType;
+    category?: CalendarEventCategory;
+    tag?: CalendarEventTag;
 
     startDate?: Date;
     endDate?: Date;
@@ -52,6 +68,12 @@ export interface RecurrenceRule {
     interval?: number; /** Example: interval: 2 + monthly = every 2 months*/
     until?: Date;
 }
+
+export type CalendarEventCategory =
+    | "personal"
+    | "health"
+    | "work"
+    | "birthday";
 
 export type CalendarEventType =
     | "event"

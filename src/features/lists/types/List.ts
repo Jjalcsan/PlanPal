@@ -9,6 +9,9 @@ export interface List {
 
     recurrence?: RecurrenceRule;
 
+    icon?: string;
+    color?: string;
+
     lastResetAt?: Date;
     nextResetAt?: Date;
 

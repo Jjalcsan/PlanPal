@@ -1,0 +1,106 @@
+import type { List } from "@/features/lists/types/List";
+
+/**
+ * Example lists used to seed local storage the first time the Lists view
+ * loads with an empty store. See `seedDefaultLists` in `api/lists.ts`.
+ */
+export const mockLists: List[] = [
+  {
+    id: "list-1",
+    title: "Groceries",
+    description: "Weekly grocery shopping",
+    type: "task",
+    mode: "checklist",
+    icon: "Shopping",
+    color: "Blue",
+    items: [
+      { id: "li-1", title: "Milk", completed: true, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-2", title: "Eggs", completed: true, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-3", title: "Bread", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-4", title: "Vegetables", completed: false, createdAt: new Date(), updatedAt: new Date() },
+    ],
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "list-2",
+    title: "Workout routine",
+    description: "Daily exercises",
+    type: "habit",
+    mode: "checklist",
+    icon: "Fitness",
+    color: "Orange",
+    items: [
+      { id: "li-5", title: "Push-ups", completed: true, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-6", title: "Squats", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-7", title: "Plank", completed: false, createdAt: new Date(), updatedAt: new Date() },
+    ],
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "list-3",
+    title: "Reading list",
+    description: "Books to read this quarter",
+    type: "custom",
+    mode: "collection",
+    icon: "Reading",
+    color: "Purple",
+    items: [
+      { id: "li-8", title: "Atomic Habits", completed: true, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-9", title: "Deep Work", completed: true, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-10", title: "The Pragmatic Programmer", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-11", title: "Clean Code", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-12", title: "Design Patterns", completed: false, createdAt: new Date(), updatedAt: new Date() },
+    ],
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "list-4",
+    title: "Home repairs",
+    description: "Pending home maintenance",
+    type: "task",
+    mode: "checklist",
+    icon: "Repair",
+    color: "Slate",
+    items: [
+      { id: "li-13", title: "Fix leaky faucet", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-14", title: "Replace air filter", completed: false, createdAt: new Date(), updatedAt: new Date() },
+    ],
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "list-5",
+    title: "Work projects",
+    description: "Active work projects",
+    type: "task",
+    mode: "checklist",
+    icon: "Work",
+    color: "Green",
+    items: [
+      { id: "li-15", title: "Q3 planning", completed: true, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-16", title: "Client meeting", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-17", title: "Update roadmap", completed: false, createdAt: new Date(), updatedAt: new Date() },
+    ],
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "list-6",
+    title: "Travel bucket list",
+    description: "Places to visit",
+    type: "custom",
+    mode: "collection",
+    icon: "Travel",
+    color: "Yellow",
+    items: [
+      { id: "li-18", title: "Japan", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-19", title: "Iceland", completed: false, createdAt: new Date(), updatedAt: new Date() },
+      { id: "li-20", title: "New Zealand", completed: false, createdAt: new Date(), updatedAt: new Date() },
+    ],
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+];

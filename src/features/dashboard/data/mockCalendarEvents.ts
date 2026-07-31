@@ -1,0 +1,66 @@
+import type { CalendarEvent, CalendarEventTag } from "@/features/calendar/types/CalendarEvent";
+
+const tags: Record<string, CalendarEventTag> = {
+  work: { id: "tag-work", name: "Work", color: "bg-blue-500" },
+  design: { id: "tag-design", name: "Design", color: "bg-purple-500" },
+  personal: { id: "tag-personal", name: "Personal", color: "bg-green-500" },
+  planning: { id: "tag-planning", name: "Planning", color: "bg-amber-500" },
+};
+
+export const mockCalendarEvents: CalendarEvent[] = [
+  {
+    id: "evt-today-1",
+    title: "Team standup",
+    type: "event",
+    tag: tags.work,
+    startDate: new Date(new Date().setHours(9, 30, 0, 0)),
+    allDay: false,
+    source: "manual",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "evt-today-2",
+    title: "Design review",
+    type: "event",
+    tag: tags.design,
+    startDate: new Date(new Date(Date.now() + 86_400_000).setHours(11, 0, 0, 0)),
+    allDay: false,
+    source: "manual",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "evt-today-3",
+    title: "Lunch with mentor",
+    type: "event",
+    tag: tags.personal,
+    startDate: new Date(new Date(Date.now() + 86_400_000).setHours(13, 0, 0, 0)),
+    allDay: false,
+    source: "manual",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "evt-today-4",
+    title: "Project planning",
+    type: "event",
+    tag: tags.planning,
+    startDate: new Date(new Date(Date.now() + 3 * 86_400_000).setHours(15, 0, 0, 0)),
+    allDay: false,
+    source: "manual",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "evt-today-5",
+    title: "Wrap up",
+    type: "event",
+    tag: tags.work,
+    startDate: new Date(new Date().setHours(17, 30, 0, 0)),
+    allDay: false,
+    source: "manual",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+];
